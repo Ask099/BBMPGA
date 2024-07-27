@@ -17,7 +17,7 @@ function [Population,FrontNo,CrowdDis] = EnvironmentalSelection(P,N,Problem)
     objs=objs+Diff_FrontNo.*max(max(objs))*10;
     for i =1:Problem.DM
         FrontNo_low(:,i) = NDSort(objs(:,1+(temp)*(i-1):temp*i),cons,Nin);
-     end
+    end
                                                                                     
     [FrontNo,MaxFNo] = NDSort(FrontNo_low,cons,N); 
     Next = FrontNo < MaxFNo;
